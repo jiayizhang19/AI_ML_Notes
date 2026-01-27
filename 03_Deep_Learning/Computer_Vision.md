@@ -1,0 +1,42 @@
+### CNN
+- Layer Abstraction:
+    - Early Layers: Low level features (Edges, lines, color blobs)
+    - Middle Layers: Middle level features (Textures, parts of objects like eyes, wheels, patterns)
+    - Late Layers: High level features (Full objects, complex scene components)
+- Architecture:
+    - Convolutional Block (**For feature extraction**)
+        - Convolutional Layer
+            - Kernel: It is placed over a corresponding section of the larger image.
+                - Each layer applies multiple kernels. They are in the same size but having different values.
+                - Multiple kernels / filters can detect different features.
+            - Padding
+                - Without padding, the kernel cannot go beyond the image edge, leading the output shrinks. 
+                - With padding, extra zeros around the image allow the kernel to slide so that the edge pixels get covered, the output remains the same size.
+            - **Output: Feature maps**
+                - Capturing or highlighting specific characteristics and features of the original image.
+                - Size: width x height x depth, where depth is the number of kernels.
+        - Activation Layer:
+            - Introduces non-linearity to the feature maps.
+            - **Output: No change in dimensions to feature map**
+        - Pooling Layer:
+            - Downsamples the spatial dimensions (width and height) of the feature maps while keeping the important / main features.
+            - **Output: Reduces width and height of the feature maps, no changes in depth.**
+    - Fully Connected Layer / Dense Layer (**For prediction**)
+        - Flattens the 3D output into a 1D vector, feed into fully connected layers for final classification.
+        - At the end of CNN architecture.
+        - Uses dropout as the regularization technique.
+- Benefits and Limitations:
+    - Benefits: 
+        - Automatically extracting relevant features from an input image, reducing the need for manual feature engineering.
+        - Spatial invariance, it can recognize objects in an image regardless of their location, size or orientation.
+        - Transfer learning, it can leverage pre-trained models, reducing the amount of data and computational resources required to train a new model.
+    - Limitations:
+        - Computational cost, training a CNN can be computationally expensive, requiring significant amounts of data and computational resources.
+        - Limited to grid-like structures, it can not handle irregular shapes or non-grid-like data structures
+        - Lack of interpretation, it is considered to be a "black box" model, make it difficult to understand why a particular prediction was made.
+- Applications:
+    - Self-driving Vechiles
+    - Medical Imaging
+    - Ficial Recognition
+
+### ViT
