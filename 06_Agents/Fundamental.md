@@ -17,10 +17,19 @@ An agent can perform any task we implement via **Tools** to complete **Actions**
   
 ### Tools
 LLMs can only receive text inputs and generate text outputs. They have no way to call tools to on their own. When we talk about providing tools to an Agent, we mean teaching the LLM about **the existence of these tools** and instructing it to **generate text-based invocations** when needed.
-#### Definition:
+1. Definition:
 A tool is **a function** given to the LLM, which should fulfill **a clear objective**. It should contain:
 - A textual description of what the function does.
 - A callable function to perform an action.
 - Input typings.
 - Output typings.
-Tip: Use @tool decorator for auto-formatting tool.
+
+Tip: Use @tool decorator for auto-formatting above tools_description in system messages. An example of system message:
+```
+system_message = """ You are an AI assistant designed to help users efficiently and accurately. Your primary goal is to provide helpful, precise, and clear responses.
+
+You have access to the following tools:
+Tool Name: calculator, Description: Multiply two integers., Arguments: a: int, b: int, Outputs: int
+"""
+```
+2. MCP (Model Context Protocol): a unified tool interface
