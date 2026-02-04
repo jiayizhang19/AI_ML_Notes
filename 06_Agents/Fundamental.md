@@ -33,3 +33,17 @@ Tool Name: calculator, Description: Multiply two integers., Arguments: a: int, b
 """
 ```
 2. MCP (Model Context Protocol): a unified tool interface
+MCP is an open protocol that standardizes **how applications provide tools to LLMs**. It provides:
+- A growing list of pre-built integrations that your LLM can directly plug into.
+- The flexibility to switch between LLM providers and vendors.
+- Best practices fro securing your data within your infrastructure.
+
+This means that any framework implementing MCP can **leverage tools defined within the protocol**, eliminating the need to reimplement the same tool interface for each framework.
+
+
+### Agent Workflow
+Agents' work is a continuous cycle of **Thought --> Action --> Observation**. In many Agent frameworks, the rules and guidelines are embedded directly into the **system prompt**, ensuring that every cycle adheres to a defined logic.
+#### Thought: Internel Reasoning and the ReAct(Reasoning + Acting) Approach
+#### Action: Tool Usage
+#### Observation: Feedback from the Environment
+Each cycle allows the agent to incorporate fresh information (observations) into its reasoning (thought), ensuring that the final answer is well-informed and accurate, which is called dynamic adaption. 
