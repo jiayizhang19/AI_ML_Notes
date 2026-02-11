@@ -6,4 +6,15 @@ An agentic framework is not always needed when building an application around LL
 ### Agentic Framework 
 1. **smolagents**: A simple yet powerful framework for building AI agents.
   (Check more resources at the end of the blog https://huggingface.co/learn/agents-course/unit2/smolagents/introduction)
-  - Primary advantages: It supports a code-first approach with minimal abstractions, letting agents interact directly via Python function calls.
+    - Primary Advantages: It supports a code-first approach with minimal abstractions, letting agents interact directly via Python function calls.
+    - Code Agents: Tradtional approaches use a JSON format to specify tool names and arguments as strings, which the system must **parse to determine which tool to execute.** However, research shows that **tool-calling LLMs work more effectively with code directly.**
+      - Use DuckDuckGoSearchTool when you need to search on the web.
+      - Use automatica code generation with additional_authorized_imports (without explicitly specified any tools) when:
+        - The task is purely computational;
+        - You trust the LLM to write correct logic;
+        - No external systems are involved;
+        - Failure has low consequences.
+      - Write custom tools when:
+        - You need to interact with external systems, for example, query DB or send email ant etc..;
+        - Business logic is complex / important;
+        - Security / safety is a concern.
