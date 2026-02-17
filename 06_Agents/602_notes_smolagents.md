@@ -123,3 +123,11 @@ An agentic framework is not always needed when building an application around LL
     )
     ```
   
+## Multi-Agent System
+Multi-agent systems enable **specialised agents to collaborate on complex tasks**, improving **modularity, scalability, and robustness**. Instead of relying on a single agent, tasks are distributed among agents with distinct capabilities.  
+A typical setup might include:
+  - A **Manager Agent** for task delegation
+  - A **Code Interpreter Agent** for code execution
+  - A **Web Search Agent** for information retrieval
+
+See example on HF Agents Course - Multi-Agent Systems.
