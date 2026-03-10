@@ -15,15 +15,11 @@ This repository is made for AI & ML learning.
   - Code Example: CNN for CIFAR-10 Dataset 
 - 04 Unsupervised Learning
   -  Basics
-- 05 Reinforcement Learning
-- 06 Agents
-  - Fundamentals
-  - smolagents
-  - Code Example: smolagents 
 
 ## How to use
 - Notes are written in Markdown files
 - Example codes are written in .py files
 - Images are stored in `/images`
 - Designed for revision, understanding, and long-term reference
+
 
